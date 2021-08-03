@@ -27,6 +27,7 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/btn_backimg"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@color/none"/>
@@ -34,9 +35,11 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
-                android:background="@color/background">
+                android:background="@drawable/mineback"
+                android:backgroundTint="@color/black">
 
                 <com.example.tiktok.CircleImageView
+                    android:id="@+id/civ_headimg"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="30dp"
@@ -132,6 +135,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
+                android:id="@+id/tv_name"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="30dp"
@@ -142,6 +146,7 @@
                 android:textStyle="italic|bold"/>
 
             <TextView
+                android:id="@+id/tv_id"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="30dp"
@@ -183,7 +188,7 @@
                     android:id="@+id/btn_locate"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
-                    android:text="+ 地区"
+                    android:text="宁波"
                     android:textColor="@color/gray"
                     app:layout_constraintTop_toBottomOf="@+id/tv_intro"
                     app:layout_constraintLeft_toRightOf="@+id/btn_age"
@@ -191,9 +196,10 @@
                     android:layout_marginLeft="5dp"/>
 
                 <Button
+                    android:id="@+id/btn_school"
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
-                    android:text="+ 学校"
+                    android:text="浙江大学"
                     android:textColor="@color/gray"
                     app:layout_constraintTop_toBottomOf="@+id/tv_intro"
                     app:layout_constraintLeft_toRightOf="@+id/btn_locate"
@@ -206,6 +212,7 @@
                 android:layout_height="60dp">
 
                 <Button
+                    android:id="@+id/btn_infro"
                     android:layout_width="165dp"
                     android:layout_height="50dp"
                     android:text="编辑资料"
@@ -219,6 +226,7 @@
                     />
 
                 <Button
+                    android:id="@+id/btn_friend"
                     android:layout_width="165dp"
                     android:layout_height="50dp"
                     android:text="添加朋友"
@@ -245,13 +253,13 @@
                 app:tabIndicatorHeight="5dp"
                 app:tabSelectedTextColor="@color/white"
                 app:tabTextColor="@color/gray"
-                app:tabBackground="@color/background"></com.google.android.material.tabs.TabLayout>
+                app:tabBackground="@color/black"></com.google.android.material.tabs.TabLayout>
 
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/vp_mine"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/background"></androidx.viewpager.widget.ViewPager>
+                android:background="@color/black"></androidx.viewpager.widget.ViewPager>
 
         </LinearLayout>
 
