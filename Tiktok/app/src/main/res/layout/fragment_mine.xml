@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MineFragment">
+
+    <ImageView
+        android:id="@+id/background_img"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="0dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pluswhite" />
+
+    <com.example.tiktok.PullScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/none"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:background="@color/background">
+
+                <com.example.tiktok.CircleImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="30dp"
+                    android:src="@drawable/pluswhite"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="获赞"
+                        android:textColor="@color/gray"
+                        android:gravity="center_horizontal|bottom"
+                        android:textSize="18sp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center_horizontal"
+                        android:textSize="25sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="粉丝"
+                        android:textColor="@color/gray"
+                        android:gravity="center_horizontal|bottom"
+                        android:textSize="18sp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center_horizontal"
+                        android:textSize="25sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="310dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="关注"
+                        android:textColor="@color/gray"
+                        android:gravity="center_horizontal|bottom"
+                        android:textSize="18sp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:gravity="center_horizontal"
+                        android:textSize="25sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:text="booooooooom"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:textSize="25sp"
+                android:textStyle="italic|bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:text="抖音号：dye7rqd0yqwu"
+                android:gravity="center_vertical|top"
+                android:textColor="@color/gray"
+                android:textSize="15sp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <TextView
+                    android:id="@+id/tv_intro"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="点击添加介绍，让大家认识你..."
+                    android:textColor="@color/gray"
+                    android:gravity="left|center_vertical"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="20dp"
+                    />
+
+                <Button
+                    android:id="@+id/btn_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="男  20岁"
+                    android:textColor="@color/gray"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_intro"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:background="@color/littlebuttongray"
+                    android:layout_marginLeft="30dp"/>
+
+                <Button
+                    android:id="@+id/btn_locate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="+ 地区"
+                    android:textColor="@color/gray"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_intro"
+                    app:layout_constraintLeft_toRightOf="@+id/btn_age"
+                    android:background="@color/littlebuttongray"
+                    android:layout_marginLeft="5dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="+ 学校"
+                    android:textColor="@color/gray"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_intro"
+                    app:layout_constraintLeft_toRightOf="@+id/btn_locate"
+                    android:background="@color/littlebuttongray"
+                    android:layout_marginLeft="5dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <Button
+                    android:layout_width="165dp"
+                    android:layout_height="50dp"
+                    android:text="编辑资料"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="@color/buttongray"
+                    android:layout_marginLeft="30dp"
+                    />
+
+                <Button
+                    android:layout_width="165dp"
+                    android:layout_height="50dp"
+                    android:text="添加朋友"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginRight="30dp"
+                    android:background="@color/buttongray"
+                    />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tl_mine"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                app:tabIndicatorFullWidth="true"
+                app:tabIndicatorColor="@color/yellow"
+                app:tabTextAppearance="@android:style/TextAppearance.Holo.Medium"
+                app:tabIndicatorHeight="5dp"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextColor="@color/gray"
+                app:tabBackground="@color/background"></com.google.android.material.tabs.TabLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vp_mine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"></androidx.viewpager.widget.ViewPager>
+
+        </LinearLayout>
+
+    </com.example.tiktok.PullScrollView>
+
+</FrameLayout>
